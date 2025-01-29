@@ -10,7 +10,7 @@ const Services = () => {
       opacity: 10,
       y: 50,
       duration: 1,
-      stagger: 0.3, 
+      stagger: 1, 
       ease: "power3.out",
       scrollTrigger: {
         trigger: "#services",

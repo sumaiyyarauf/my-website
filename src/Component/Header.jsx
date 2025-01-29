@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import image from "../assets/logo.png";
 
-const Header = () => {
+const Header = ({ cartItems, setIsCartOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -25,9 +25,21 @@ const Header = () => {
           <li><a href="#pricing" className="hover:text-gray-400">Signature Dishes</a></li>
           <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
         </ul>
+
+        {/* Cart Icon */}
+        <div className="relative">
+          <button onClick={() => setIsCartOpen((prev) => !prev)} className="relative text-white text-2xl">
+            🛒
+            {cartItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                {cartItems.length}
+              </span>
+            )}
+          </button>
+        </div>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
