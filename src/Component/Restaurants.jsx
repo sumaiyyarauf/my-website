@@ -9,7 +9,7 @@ const Restaurants = ({ addToCart }) => {
 
   return (
     <div className="container bg-yellow-500 mx-auto my-12 rounded-lg p-6">
-      <h1 className="text-3xl text-center font-bold mb-4">Food Menu</h1>
+      <h1 className="text-3xl text-center font-bold mb-4">Trending Deals</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {menu.map((item) => (
           <div key={item.id} className="p-4 border rounded-lg shadow bg-white">
